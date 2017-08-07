@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>            
+ 
+<head>
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+ 
+    <title>Forma with save in MySQL</title>
+
+</head>
+ 
+<body>
+ 
+<h3>Form with save data in MySQL</h3>
+ 
+<form action="save_form.php" method="post" name="test_form">
+<table border="1" cellpadding="0" cellspacing="0">
+ <tr>
+  <td colspan="2" align="center"><strong>Send inquiry</strong></td>
+ </tr>
+ <tr>
+  <td width="150">zapis :</td>
+  <td><input type="text" name="test_zapis" maxlength="100" /></td>
+ </tr>
+  <td colspan="2" align="center">
+   <input type="submit" class="buttons" value="Send inquiry" />
+   <input type="reset" class="buttons" value="Clear" />
+  </td>
+ </tr>
+</table>
+</form>
+ 
+ 
+ 
+<form action="view_data.php" method="post" name="view_result">
+<table>
+ <tr>
+  <td align="center"><input type="submit" class="buttons" value="View previously saved data" /></td>
+ </tr>
+</table>
+</form>
+ 
+ 
+</body>
+</html>
+
