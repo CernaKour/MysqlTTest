@@ -66,6 +66,6 @@ echo ("</table>\n");
 mysql_close();
  
 /* Выводим ссылку возврата */
-echo ("<div style=\"text-align: center; margin-top: 10px;\"><a href=\"iindex.html\">Return</a></div>");
+echo ("<div style=\"text-align: center; margin-top: 10px;\"><a href=\"index.html\">Return</a></div>");
  
 ?>

@@ -37,6 +37,6 @@ mysql_close();
 echo ("<div style=\"text-align: center; margin-top: 10px;\">
 <font color=\"green\">Data success save!</font>
  
-<a href=\"iindex.html\">Return</a></div>");
+<a href=\"index.html\">Return</a></div>");
  
 ?>
