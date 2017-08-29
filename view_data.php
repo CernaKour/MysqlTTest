@@ -15,12 +15,16 @@ mysql_connect($hostname, $username, $password) or die ("Not can create connectio
 /* Выбираем базу данных. Если произойдет ошибка - вывести ее */
 mysql_select_db($dbName) or die (mysql_error());
  
+//$link = mysqli_connect($hostname, $username, $password) or die (mysqli_error());
+//mysqli_select_db($link,$dbName) or die (mysql_error());
+//mysqli_query($link, ‘set names cp1251’)
+
 /* Составляем запрос для извлечения данных  полей таблицы "test_table" */
 $query = "SELECT zav FROM $table";
  
 /* Выполняем запрос. Если произойдет ошибка - вывести ее. */
 $res = mysql_query($query) or die(mysql_error());
- 
+//$res = mysqli_query($link,$query) or die(mysqli_error());
 /* Выводим данные из таблицы */
 echo ("
 <!DOCTYPE html>
@@ -56,6 +60,7 @@ td { padding: 3px; text-align: center; vertical-align: middle; }
  
 /* Цикл вывода данных из базы конкретных полей */
 while ($row = mysql_fetch_array($res)) {
+//while ($row = mysqli_fetch_array($res)) {
     echo "<tr>\n";
     echo "<td>".$row['zav']."</td>\n</tr>\n";
 }
@@ -64,8 +69,10 @@ echo ("</table>\n");
  
 /* Закрываем соединение */
 mysql_close();
- 
+//mysqli_close($link);
+
+
 /* Выводим ссылку возврата */
-echo ("<div style=\"text-align: center; margin-top: 10px;\"><a href=\"index.html\">Return</a></div>");
+echo ("<div style=\"text-align: center; margin-top: 10px;\"><a href=\"iindex.html\">Return</a></div>");
  
 ?>

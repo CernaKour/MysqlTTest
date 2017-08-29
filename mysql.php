@@ -64,6 +64,19 @@ function mysql_free_result($res) {
   return mysqli_free_result($res);
 }
 
+function mysql_real_escape_string($string,$link=NULL) {
+ if ($link===NULL) $link=$GLOBALS['mysql_oldstyle_link'];
+  return mysqli_real_escape_string($GLOBALS['mysql_oldstyle_link'],$string);
+}
+
 function mysql_close($link) {
   return mysqli_close($link);
 }
+function defender_xss($arr){
+    $filter = array("<", ">");  
+     foreach($arr as $num=>$xss){
+        $arr[$num]=str_replace ($filter, "|", $xss);
+     }
+       return $arr;
+} 
+
