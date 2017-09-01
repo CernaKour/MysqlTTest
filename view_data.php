@@ -62,7 +62,7 @@ td { padding: 3px; text-align: center; vertical-align: middle; }
 while ($row = mysql_fetch_array($res)) {
 //while ($row = mysqli_fetch_array($res)) {
     echo "<tr>\n";
-    echo "<td>".$row['zav']."</td>\n</tr>\n";
+    echo "<td>".htmlspecialchars($row['zav'])."</td>\n</tr>\n";
 }
  
 echo ("</table>\n");
